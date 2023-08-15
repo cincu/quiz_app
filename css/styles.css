@@ -1,0 +1,115 @@
+@import "./global.css";
+@import "./cards.css";
+* {
+    font-family: var(--font-fam);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--seckground-color);
+    padding-bottom: 150px;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: 1px 1px 1px 1px var(--highlight-color);
+    z-index: 1;
+}
+h1 {
+    text-align: center;
+    font-family: var(--font-fam);
+    color: var(--highlight-color);
+    text-shadow: 1px 2px px white;
+}
+
+/* main */
+
+
+button {
+    background-color: var(--shadows);
+    color: white;
+    position: relative;
+    left: 10%;
+    border-radius: 20px;
+    height: 30px;
+}
+.card__section--button:active {
+    background-color: var(--highlight-color);
+    
+}
+.card__section--button:hover {
+    cursor: crosshair;
+}
+
+li {
+    list-style: none;
+}
+p {
+    text-align: center;
+    font-family: var(--font-fam);
+    color: var(--shadows);
+    font-size: 80%;
+    padding: 10%;
+}
+.hints {
+    font-family: var(--font-fam);
+    font-size: 70%;
+    color: var(--shadows);
+    padding-bottom: 10px;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    height: 10%;
+    box-shadow: 1px 1px 1px 1px var(--highlight-color);
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%%;
+    align-items:flex-end;
+}
+
+.icon {
+    width: 3rem;
+    background-color: var(--text-color);
+    border-radius: 50px;
+
+}
+.icon:hover{
+    background-color: var(--highlight-color);
+}
+
+/* profile page */
+
+.sote {
+    width: 50%;
+    border-radius: 100%;
+    position: relative;
+    margin: 30px;
+}
+h4 {
+    margin: 0;
+    padding: 0;
+    color: var(--shadows);
+    font-family: var(--font-fam);
+}
+.container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-evenly;
+    padding: 20px;
+    align-content: center;
+    flex-direction: column;
+}

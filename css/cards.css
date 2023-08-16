@@ -33,3 +33,14 @@ header {
     border-radius: 20px;
     top: 90px;
 }
+
+.card__section-answers {
+    background-color: var(--text-color);
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    margin: 40px 20px 40px 20px;
+    position: relative;
+    top: 100px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rebeccapurple;
+}

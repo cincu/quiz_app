@@ -1,14 +1,20 @@
-section.card-section {
-    background-color: var(--text-color);
-    box-sizing: border-box;
-    margin: 40px 20px 40px 20px;
-    position: relative;
-    top: 100px;
+.section-card {
     border-radius: 20px;
+    margin: 40px 20px 40px 20px;
+    top: 100px;
+    position: relative;
+    background-color: var(--text-color);
+    padding: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 2px 2px 2px 2px rebeccapurple;
 }
-
-.card__section--button {
+.section-card__title {
+    color: var(--shadows);
+}
+.section-card__button {
     width: 4rem;
     border: none;
     position: absolute;
@@ -21,6 +27,18 @@ header {
     position: relative;
 }
 
+.section-card__hints {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.section-card__hint {
+    font-family: var(--font-fam);
+    font-size: 70%;
+    color: var(--shadows);
+    padding-bottom: 10px;
+}
 .card-profile {
     position: relative;
     background-color: var(--text-color);

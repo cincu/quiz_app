@@ -9,7 +9,10 @@ body {
     background-color: var(--seckground-color);
     padding-bottom: 150px;
 }
-
+main {
+    display: grid;
+    place-items: center;
+}
 /* header */
 header {
     position: fixed;
@@ -20,6 +23,7 @@ header {
     box-shadow: 1px 1px 1px 1px var(--highlight-color);
     z-index: 1;
 }
+
 h1 {
     text-align: center;
     font-family: var(--font-fam);
@@ -29,20 +33,36 @@ h1 {
 
 /* main */
 
-
 button {
     background-color: var(--shadows);
     color: white;
     position: relative;
-    left: 10%;
     border-radius: 20px;
     height: 30px;
+    box-shadow: 1px 1px 1px 1px rebeccapurple;
+    transition: all 1s ease-out;
 }
-.card__section--button:active {
-    background-color: var(--highlight-color);
-    
+
+.button.active {
+    transform: scale (.9);
+    box-shadow: 3px 2px 2px 3px rebeccapurple; 
 }
-.card__section--button:hover {
+
+.section-card__button {
+    opacity: 0.5;
+}
+
+.section-card__liked {
+    opacity: 1;
+}
+
+.section-card__hidden {
+    color: var(--text-color);
+}
+.section-card__answer {
+    color: var(--shadows);
+}
+.section-card__button:hover {
     cursor: crosshair;
 }
 
@@ -50,46 +70,34 @@ li {
     list-style: none;
 }
 
-p {
+.section-card__content {
     text-align: center;
     font-family: var(--font-fam);
     color: var(--shadows);
     font-size: 80%;
     padding: 10%;
 }
-.hints {
-    font-family: var(--font-fam);
-    font-size: 70%;
-    color: var(--shadows);
-    padding-bottom: 10px;
-}
-
 
 /* footer */
 footer {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     bottom: 0;
     width: 100%;
     background-color: var(--background-color);
-    height: 10%;
-    box-shadow: 1px 1px 1px 1px var(--highlight-color);
-}
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%%;
-    align-items:flex-end;
-}
+    height: 15%;}
 
 .icon {
     width: 3rem;
     background-color: var(--text-color);
     border-radius: 50px;
-
+    transition: background-color .3s;
+    animation: pulse 500ms infinite;
 }
 .icon:hover{
-    background-color: var(--highlight-color);
+    background-color: var(--shadows);
 }
 
 /* profile page */
@@ -113,4 +121,26 @@ h4 {
     padding: 20px;
     align-content: center;
     flex-direction: column;
+}
+
+/* @keyframes pulse {
+    from{
+    box-shadow: 0 0 0 0 rgba(222, 0, 0, 1)};
+to {box-shadow: 0 0 5px 5px rgb(0, 22, 0, 0)};
+} */
+
+
+
+/* form.html page */
+.form {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding: 10px;
+}
+input {
+    margin: 10px;
 }

@@ -1,16 +1,16 @@
 .section-card {
     border-radius: 20px;
-    margin: 40px 20px 40px 20px;
+    margin: 10px 20px 60px 20px;
     top: 100px;
     position: relative;
     background-color: var(--text-color);
     padding: 10px;
-    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 2px 2px 2px 2px rebeccapurple;
 }
+
 .section-card__title {
     color: var(--shadows);
 }
@@ -21,7 +21,16 @@
     right: -20px;
     top: -20px;
     border-radius: 50px;
+    opacity: 0.5;
 }
+.section-card__button-select {
+    width: 4rem;
+    border: none;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    border-radius: 50px;
+    }
 
 header {
     position: relative;
@@ -49,7 +58,15 @@ header {
     align-items: center;
     box-shadow: 2px 2px 2px 2px rebeccapurple;
     border-radius: 20px;
-    top: 90px;
+    margin-bottom: 100px;
+    top: 90px;}
+
+.section-card__content {
+    text-align: center;
+    font-family: var(--font-fam);
+    color: var(--shadows);
+    font-size: 80%;
+    padding: 10px;
 }
 
 .card__section-answers {

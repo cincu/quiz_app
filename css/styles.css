@@ -6,7 +6,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--text-color);
     padding-bottom: 150px;
 }
 main {

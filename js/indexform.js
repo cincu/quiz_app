@@ -39,18 +39,22 @@
     bodyMain.append(sectionToAppend)
   };
 
-  //challenge4:
-const questionCharCount = document.querySelector('[data-js="text-input"]');
-const charCount = document.querySelector('[data-js="charCount"]');
-const maxLength = questionCharCount.getAttribute('maxlength');
+  //challenge4 long:
 
-questionCharCount.addEventListener('input', updateCharCount);
+const textInputOne = document.querySelector('[data-js="text-input1"]');
+const charCountOne = document.querySelector('[data-js="charCount1"]');
+const maxLengthOne = Number(textInputOne.getAttribute('maxlength'));
 
-function updateCharCount () {
-  const currentLength = questionCharCount.value.length
+const textInputTwo = document.querySelector('[data-js="text-input2"]');
+const charCountTwo = document.querySelector('[data-js="charCount2"]');
+const maxLengthTwo = Number(textInputTwo.getAttribute('maxlength'));
+
+textInputOne.addEventListener('input', () => updateCharacterCount(textInputOne, charCountOne, maxLengthOne));
+textInputTwo.addEventListener('input', () => updateCharacterCount(textInputTwo, charCountTwo, maxLengthTwo));
+
+function updateCharacterCount (textInput, charCount, maxLength) {
+  const currentLength = textInput.value.length
   const charLeft = maxLength - currentLength
   charCount.textContent = `Characters left: ${charLeft}`
 }
-
-questionCharCount.addEventListener('input', updateCharCount);
-
+//couldnt manage without queryselectorall or loops or Array.from()

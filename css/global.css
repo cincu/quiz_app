@@ -7,18 +7,10 @@
     
 }
 
-/* my dark color scheme
-@media (prefers-color-scheme: dark) {
-    :root {
-        --seckground-color: #929292;
-        --background-color: #7500fa;
-        --text-color: #62ff51;
-        --highlight-color: #3dff23;
-        --shadows: #29131b;
-        --font-fam: Verdana, Geneva, Tahoma, sans-serif;
-    }
+body.dark {
+    --background-color: #585858;
+    --text-color: #11ff1d;
+    --shadows: #8c00ff;
+    --font-fam: 'Quicksand', sans-serif;
+    --font-head: 'Calistoga', cursive;
 }
-.dark-mode:active {
-    
-}
-*/

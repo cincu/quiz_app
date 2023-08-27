@@ -1,24 +1,16 @@
 :root {
-    --seckground-color: #ffffff;
     --background-color: #5017a7;
-    --text-color: #ebebeb;
-    --highlight-color: #c1c1c1;
+    --text-color: #f2f2f2;
     --shadows: #f00054;
-    --font-fam: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-/* my dark color scheme
-@media (prefers-color-scheme: dark) {
-    :root {
-        --seckground-color: #929292;
-        --background-color: #7500fa;
-        --text-color: #62ff51;
-        --highlight-color: #3dff23;
-        --shadows: #29131b;
-        --font-fam: Verdana, Geneva, Tahoma, sans-serif;
-    }
-}
-.dark-mode:active {
+    --font-fam: 'Quicksand', sans-serif;
+    --font-head: 'Calistoga', cursive;
     
 }
-*/
+
+body.dark {
+    --background-color: #585858;
+    --text-color: #11ff1d;
+    --shadows: #8c00ff;
+    --font-fam: 'Quicksand', sans-serif;
+    --font-head: 'Calistoga', cursive;
+}

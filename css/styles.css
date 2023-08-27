@@ -6,8 +6,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--seckground-color);
     padding-bottom: 150px;
+}
+main {
+    display: grid;
+    place-items: center;
 }
 
 /* header */
@@ -17,32 +20,45 @@ header {
     height: 100px;
     width: 100%;
     background-color: var(--background-color);
-    box-shadow: 1px 1px 1px 1px var(--highlight-color);
     z-index: 1;
 }
+
 h1 {
     text-align: center;
-    font-family: var(--font-fam);
-    color: var(--highlight-color);
-    text-shadow: 1px 2px px white;
+    font-family: var(--font-head);
+    color: var(--text-color);
+    letter-spacing: .6rem;
 }
 
-/* main */
 
+/* main */
 
 button {
     background-color: var(--shadows);
     color: white;
     position: relative;
-    left: 10%;
     border-radius: 20px;
     height: 30px;
+    box-shadow: 1px 1px 1px 1px rebeccapurple;
+    transition: all 1s ease-out;
 }
-.card__section--button:active {
-    background-color: var(--highlight-color);
-    
+
+.button.active {
+    transform: scale (.9);
+    box-shadow: 3px 2px 2px 3px rebeccapurple; 
 }
-.card__section--button:hover {
+
+.section-card__liked {
+    opacity: 1;
+}
+
+.section-card__hidden {
+    color: var(--text-color);
+}
+.section-card__answer {
+    color: var(--shadows);
+}
+.section-card__button:hover {
     cursor: crosshair;
 }
 
@@ -50,53 +66,35 @@ li {
     list-style: none;
 }
 
-p {
-    text-align: center;
-    font-family: var(--font-fam);
-    color: var(--shadows);
-    font-size: 80%;
-    padding: 10%;
-}
-.hints {
-    font-family: var(--font-fam);
-    font-size: 70%;
-    color: var(--shadows);
-    padding-bottom: 10px;
-}
-
 
 /* footer */
 footer {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     bottom: 0;
     width: 100%;
     background-color: var(--background-color);
-    height: 10%;
-    box-shadow: 1px 1px 1px 1px var(--highlight-color);
-}
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%%;
-    align-items:flex-end;
-}
+    height: 15%;}
 
 .icon {
     width: 3rem;
     background-color: var(--text-color);
     border-radius: 50px;
-
+    transition: background-color .3s;
+    animation: pulse 500ms infinite;
 }
 .icon:hover{
-    background-color: var(--highlight-color);
+    background-color: var(--shadows);
 }
 
 /* profile page */
 
 .sote {
     width: 50%;
-    border-radius: 100%;
+    border-radius: 70px;
+    box-shadow: 1px 1px 1px 1px rebeccapurple;
     position: relative;
     margin: 30px;
 }
@@ -113,4 +111,33 @@ h4 {
     padding: 20px;
     align-content: center;
     flex-direction: column;
+}
+.profile-button {
+    margin: 10px;
+}
+
+/* form page */
+.form {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-color);
+    border-radius: 20px;
+}
+form {
+    width: 70%;
+}
+
+label {
+    padding: 10px;
+    
+}
+input {
+    margin: 10px;
+}
+.card-profile__toggle-button {
+    background-color: blueviolet;
+    border: solid 1px var(--text-color);
+    width: 10rem;
+    border-radius: 2rem;
 }
